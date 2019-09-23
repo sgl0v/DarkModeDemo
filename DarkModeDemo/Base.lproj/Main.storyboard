@@ -1,24 +1,423 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="w2X-IX-Q0Z">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Item-->
+        <scene sceneID="jsa-vy-xBN">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <navigationController id="w2X-IX-Q0Z" customClass="StyleableNavigationController" customModule="DarkModeDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="p47-G7-YQ4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jdq-12-zIv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qTA-NM-0Yh" kind="relationship" relationship="rootViewController" id="icg-NF-nSs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cky-j5-8dy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="65" y="147"/>
+        </scene>
+        <!--Archive-->
+        <scene sceneID="neY-O5-z2q">
+            <objects>
+                <tableViewController title="Archive" id="qTA-NM-0Yh" customClass="MoviesTableViewController" customModule="DarkModeDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="94" sectionHeaderHeight="18" sectionFooterHeight="18" id="CrL-Lx-G2g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <inset key="separatorInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <sections>
+                            <tableViewSection id="bKy-fT-GNx">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="kZq-wj-Ib4" userLabel="The Shawshank Redemption Cell" customClass="MovieTableViewCell" customModule="DarkModeDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="18" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kZq-wj-Ib4" id="h7Z-Q2-PId">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Shawshank Redemption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Zy-nj-Xvb">
+                                                    <rect key="frame" x="93.5" y="14" width="232.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="The_Shawshank_Redemption" translatesAutoresizingMaskIntoConstraints="NO" id="4vx-zk-AeX">
+                                                    <rect key="frame" x="20" y="10" width="53.5" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="BuE-J7-CNx"/>
+                                                        <constraint firstAttribute="width" secondItem="4vx-zk-AeX" secondAttribute="height" multiplier="1:1.5" id="OLB-Rp-a9Q"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCv-aU-A3Y">
+                                                    <rect key="frame" x="93.5" y="38.5" width="300.5" height="47"/>
+                                                    <string key="text">Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="0.39662000868055558" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="pCv-aU-A3Y" firstAttribute="top" secondItem="6Zy-nj-Xvb" secondAttribute="bottom" constant="4" id="CII-9m-oON"/>
+                                                <constraint firstItem="4vx-zk-AeX" firstAttribute="leading" secondItem="h7Z-Q2-PId" secondAttribute="leading" constant="20" id="Co0-TS-X4p"/>
+                                                <constraint firstItem="pCv-aU-A3Y" firstAttribute="leading" secondItem="4vx-zk-AeX" secondAttribute="trailing" constant="20" id="H5Z-vP-tnd"/>
+                                                <constraint firstAttribute="trailing" secondItem="pCv-aU-A3Y" secondAttribute="trailing" constant="20" id="dF6-W6-YQ7"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6Zy-nj-Xvb" secondAttribute="trailing" constant="20" symbolic="YES" id="fbu-m8-KLr"/>
+                                                <constraint firstItem="6Zy-nj-Xvb" firstAttribute="leading" secondItem="4vx-zk-AeX" secondAttribute="trailing" constant="20" id="hnh-Qj-2Xw"/>
+                                                <constraint firstItem="4vx-zk-AeX" firstAttribute="centerY" secondItem="h7Z-Q2-PId" secondAttribute="centerY" id="hsz-aj-wbT"/>
+                                                <constraint firstItem="6Zy-nj-Xvb" firstAttribute="top" secondItem="4vx-zk-AeX" secondAttribute="top" constant="4" id="mbI-fI-5NM"/>
+                                                <constraint firstItem="4vx-zk-AeX" firstAttribute="centerY" secondItem="h7Z-Q2-PId" secondAttribute="centerY" id="q2T-sO-d7p"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="pCv-aU-A3Y" id="RhH-FO-gxk"/>
+                                            <outlet property="titleLabel" destination="6Zy-nj-Xvb" id="vit-cI-H19"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="yCO-4E-6Vh" userLabel="The Godfather Cell" customClass="MovieTableViewCell" customModule="DarkModeDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="118" width="414" height="94"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yCO-4E-6Vh" id="Ub9-Jk-WYO">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Godfather " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHi-vI-d55">
+                                                    <rect key="frame" x="93.5" y="11" width="122.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="The_Godfather " translatesAutoresizingMaskIntoConstraints="NO" id="BM8-aG-FF6">
+                                                    <rect key="frame" x="20" y="7" width="53.5" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="BM8-aG-FF6" secondAttribute="height" multiplier="1:1.5" id="2Aa-BY-R7m"/>
+                                                        <constraint firstAttribute="height" constant="80" id="eNM-Lf-VBj"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3v1-cd-ZDd">
+                                                    <rect key="frame" x="93.5" y="36" width="300.5" height="47"/>
+                                                    <string key="text">Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="0.39662000870000003" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="BM8-aG-FF6" firstAttribute="centerY" secondItem="Ub9-Jk-WYO" secondAttribute="centerY" id="AxU-sE-yuz"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XHi-vI-d55" secondAttribute="trailing" constant="20" symbolic="YES" id="F6X-Xq-rSx"/>
+                                                <constraint firstItem="3v1-cd-ZDd" firstAttribute="top" secondItem="XHi-vI-d55" secondAttribute="bottom" constant="4" id="Mm2-OZ-fPb"/>
+                                                <constraint firstItem="XHi-vI-d55" firstAttribute="leading" secondItem="BM8-aG-FF6" secondAttribute="trailing" constant="20" id="PvA-J3-tuo"/>
+                                                <constraint firstItem="BM8-aG-FF6" firstAttribute="leading" secondItem="Ub9-Jk-WYO" secondAttribute="leading" constant="20" id="aKI-pc-PYI"/>
+                                                <constraint firstAttribute="trailing" secondItem="3v1-cd-ZDd" secondAttribute="trailing" constant="20" id="j4Q-yR-5HG"/>
+                                                <constraint firstItem="3v1-cd-ZDd" firstAttribute="leading" secondItem="BM8-aG-FF6" secondAttribute="trailing" constant="20" id="kH0-P6-GBF"/>
+                                                <constraint firstItem="XHi-vI-d55" firstAttribute="top" secondItem="BM8-aG-FF6" secondAttribute="top" constant="4" id="uND-Aa-crS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="3v1-cd-ZDd" id="6PH-zV-XYY"/>
+                                            <outlet property="titleLabel" destination="XHi-vI-d55" id="aVD-ti-u2I"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="uW0-iX-nRb" userLabel="Schindler's List Cell" customClass="MovieTableViewCell" customModule="DarkModeDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="212" width="414" height="94"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uW0-iX-nRb" id="07p-pv-ggJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schindler's List " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ass-ej-gOy">
+                                                    <rect key="frame" x="93.5" y="11" width="129.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Schindlers_List " translatesAutoresizingMaskIntoConstraints="NO" id="soU-bW-OE7">
+                                                    <rect key="frame" x="20" y="7" width="53.5" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="soU-bW-OE7" secondAttribute="height" multiplier="1:1.5" id="K9j-0R-ZPW"/>
+                                                        <constraint firstAttribute="height" constant="80" id="fr5-TN-yZ5"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUF-qj-Sjm">
+                                                    <rect key="frame" x="93.5" y="36" width="300.5" height="47"/>
+                                                    <string key="text">The true story of how businessman Oskar Schindler saved over a thousand Jewish lives from the Nazis while they worked as slaves in his factory during World War II.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="0.39662000870000003" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="soU-bW-OE7" firstAttribute="centerY" secondItem="07p-pv-ggJ" secondAttribute="centerY" id="2bL-4E-M7s"/>
+                                                <constraint firstItem="BUF-qj-Sjm" firstAttribute="top" secondItem="Ass-ej-gOy" secondAttribute="bottom" constant="4" id="514-0a-SdS"/>
+                                                <constraint firstAttribute="trailing" secondItem="BUF-qj-Sjm" secondAttribute="trailing" constant="20" id="F1g-f1-d6r"/>
+                                                <constraint firstItem="Ass-ej-gOy" firstAttribute="top" secondItem="soU-bW-OE7" secondAttribute="top" constant="4" id="W6e-Ld-O6U"/>
+                                                <constraint firstItem="Ass-ej-gOy" firstAttribute="leading" secondItem="soU-bW-OE7" secondAttribute="trailing" constant="20" id="dh9-Ww-oyl"/>
+                                                <constraint firstItem="soU-bW-OE7" firstAttribute="leading" secondItem="07p-pv-ggJ" secondAttribute="leading" constant="20" id="nbc-Tk-tzk"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ass-ej-gOy" secondAttribute="trailing" constant="20" symbolic="YES" id="pYs-k5-faf"/>
+                                                <constraint firstItem="BUF-qj-Sjm" firstAttribute="leading" secondItem="soU-bW-OE7" secondAttribute="trailing" constant="20" id="u0C-6K-oXL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="BUF-qj-Sjm" id="2ee-pK-XTZ"/>
+                                            <outlet property="titleLabel" destination="Ass-ej-gOy" id="ZMw-42-Rgi"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="JOU-rN-WzC" userLabel="Parasite Cell" customClass="MovieTableViewCell" customModule="DarkModeDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="306" width="414" height="94"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JOU-rN-WzC" id="vee-di-gow">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parasite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRE-n5-7D8">
+                                                    <rect key="frame" x="93.5" y="11" width="67" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Parasite" translatesAutoresizingMaskIntoConstraints="NO" id="tfE-wx-Kds">
+                                                    <rect key="frame" x="20" y="7" width="53.5" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="4zC-TY-x9L"/>
+                                                        <constraint firstAttribute="width" secondItem="tfE-wx-Kds" secondAttribute="height" multiplier="1:1.5" id="Bk4-pj-97G"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGQ-ML-gFr">
+                                                    <rect key="frame" x="93.5" y="36" width="300.5" height="47"/>
+                                                    <string key="text">All unemployed, Ki-taek's family takes peculiar interest in the wealthy and glamorous Parks for their livelihood until they get entangled in an unexpected incident.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="0.39662000870000003" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="tfE-wx-Kds" firstAttribute="leading" secondItem="vee-di-gow" secondAttribute="leading" constant="20" id="GsM-Sv-RDf"/>
+                                                <constraint firstItem="MGQ-ML-gFr" firstAttribute="leading" secondItem="tfE-wx-Kds" secondAttribute="trailing" constant="20" id="Nok-Rn-MPN"/>
+                                                <constraint firstItem="tfE-wx-Kds" firstAttribute="centerY" secondItem="vee-di-gow" secondAttribute="centerY" id="Qi4-1w-Wgr"/>
+                                                <constraint firstItem="FRE-n5-7D8" firstAttribute="leading" secondItem="tfE-wx-Kds" secondAttribute="trailing" constant="20" id="Shn-hM-Yrv"/>
+                                                <constraint firstItem="FRE-n5-7D8" firstAttribute="top" secondItem="tfE-wx-Kds" secondAttribute="top" constant="4" id="Vk0-0f-mz0"/>
+                                                <constraint firstItem="MGQ-ML-gFr" firstAttribute="top" secondItem="FRE-n5-7D8" secondAttribute="bottom" constant="4" id="a9N-Si-aBS"/>
+                                                <constraint firstAttribute="trailing" secondItem="MGQ-ML-gFr" secondAttribute="trailing" constant="20" id="hgC-Va-3cr"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FRE-n5-7D8" secondAttribute="trailing" constant="20" symbolic="YES" id="vQv-1x-R43"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="MGQ-ML-gFr" id="mfw-NR-ljW"/>
+                                            <outlet property="titleLabel" destination="FRE-n5-7D8" id="hSC-8u-vsX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="tMt-YQ-lK0" userLabel="The Green Mile Cell" customClass="MovieTableViewCell" customModule="DarkModeDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="400" width="414" height="94"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tMt-YQ-lK0" id="gd4-hl-f8w">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Green Mile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Um5-B4-Yf8">
+                                                    <rect key="frame" x="93.5" y="11" width="122.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="The_Green_Mile" translatesAutoresizingMaskIntoConstraints="NO" id="J5R-jQ-qvk">
+                                                    <rect key="frame" x="20" y="7" width="53.5" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="JVo-Dg-65x"/>
+                                                        <constraint firstAttribute="width" secondItem="J5R-jQ-qvk" secondAttribute="height" multiplier="1:1.5" id="yiw-uc-CNA"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCc-qy-wjW">
+                                                    <rect key="frame" x="93.5" y="36" width="300.5" height="47"/>
+                                                    <string key="text">A supernatural tale set on death row in a Southern prison, where gentle giant John Coffey possesses the mysterious power to heal people's ailments. When the cell block's head guard, Paul Edgecomb, recognizes Coffey's miraculous gift, he tries desperately to help stave off the condemned man's execution.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="0.39662000870000003" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="J5R-jQ-qvk" firstAttribute="centerY" secondItem="gd4-hl-f8w" secondAttribute="centerY" id="KEE-qA-UsI"/>
+                                                <constraint firstItem="J5R-jQ-qvk" firstAttribute="leading" secondItem="gd4-hl-f8w" secondAttribute="leading" constant="20" id="UnN-tX-3bO"/>
+                                                <constraint firstItem="Um5-B4-Yf8" firstAttribute="leading" secondItem="J5R-jQ-qvk" secondAttribute="trailing" constant="20" id="XBq-Bq-qKf"/>
+                                                <constraint firstItem="Um5-B4-Yf8" firstAttribute="top" secondItem="J5R-jQ-qvk" secondAttribute="top" constant="4" id="i8i-hE-oqy"/>
+                                                <constraint firstAttribute="trailing" secondItem="gCc-qy-wjW" secondAttribute="trailing" constant="20" id="k6t-0O-U56"/>
+                                                <constraint firstItem="gCc-qy-wjW" firstAttribute="leading" secondItem="J5R-jQ-qvk" secondAttribute="trailing" constant="20" id="sa8-rz-KAd"/>
+                                                <constraint firstItem="gCc-qy-wjW" firstAttribute="top" secondItem="Um5-B4-Yf8" secondAttribute="bottom" constant="4" id="ty5-Lx-sEi"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Um5-B4-Yf8" secondAttribute="trailing" constant="20" symbolic="YES" id="uGL-P5-FYF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="gCc-qy-wjW" id="ezd-Yh-BnQ"/>
+                                            <outlet property="titleLabel" destination="Um5-B4-Yf8" id="Ssu-yz-CpV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="pFb-Vm-QNv" userLabel="Life Is Beautiful Cell" customClass="MovieTableViewCell" customModule="DarkModeDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="494" width="414" height="94"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pFb-Vm-QNv" id="f1c-dN-aib">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Life Is Beautiful" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcA-vB-bf9">
+                                                    <rect key="frame" x="93.5" y="11" width="126.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Life_Is_Beautiful" translatesAutoresizingMaskIntoConstraints="NO" id="cR6-gf-qzd">
+                                                    <rect key="frame" x="20" y="7" width="53.5" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="cR6-gf-qzd" secondAttribute="height" multiplier="1:1.5" id="txR-oF-juJ"/>
+                                                        <constraint firstAttribute="height" constant="80" id="zGE-3j-c6x"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpD-DW-3AH">
+                                                    <rect key="frame" x="93.5" y="36" width="300.5" height="47"/>
+                                                    <string key="text">A touching story of an Italian book seller of Jewish ancestry who lives in his own little fairy tale. His creative and happy life would come to an abrupt halt when his entire family is deported to a concentration camp during World War II. While locked up he tries to convince his son that the whole thing is just a game.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="0.39662000870000003" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fcA-vB-bf9" secondAttribute="trailing" constant="20" symbolic="YES" id="227-Kt-YVs"/>
+                                                <constraint firstItem="cR6-gf-qzd" firstAttribute="centerY" secondItem="f1c-dN-aib" secondAttribute="centerY" id="Kdn-nJ-8oc"/>
+                                                <constraint firstItem="cR6-gf-qzd" firstAttribute="leading" secondItem="f1c-dN-aib" secondAttribute="leading" constant="20" id="bwG-sC-MMB"/>
+                                                <constraint firstItem="fcA-vB-bf9" firstAttribute="top" secondItem="cR6-gf-qzd" secondAttribute="top" constant="4" id="gNt-WU-ElX"/>
+                                                <constraint firstItem="fcA-vB-bf9" firstAttribute="leading" secondItem="cR6-gf-qzd" secondAttribute="trailing" constant="20" id="ud2-8S-dUi"/>
+                                                <constraint firstItem="dpD-DW-3AH" firstAttribute="leading" secondItem="cR6-gf-qzd" secondAttribute="trailing" constant="20" id="vgt-WC-6Ky"/>
+                                                <constraint firstItem="dpD-DW-3AH" firstAttribute="top" secondItem="fcA-vB-bf9" secondAttribute="bottom" constant="4" id="w7a-EA-rRP"/>
+                                                <constraint firstAttribute="trailing" secondItem="dpD-DW-3AH" secondAttribute="trailing" constant="20" id="xP0-ec-cwa"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="dpD-DW-3AH" id="DuB-V7-A2h"/>
+                                            <outlet property="titleLabel" destination="fcA-vB-bf9" id="pWZ-Vu-rqs"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Y7l-Gb-iRO" userLabel="Pulp Fiction Cell" customClass="MovieTableViewCell" customModule="DarkModeDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="588" width="414" height="94"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y7l-Gb-iRO" id="zap-Ch-S90">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pulp Fiction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YH6-Js-3d5">
+                                                    <rect key="frame" x="93.5" y="11" width="96.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pulp_Fiction" translatesAutoresizingMaskIntoConstraints="NO" id="2ag-38-Rtd">
+                                                    <rect key="frame" x="20" y="7" width="53.5" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="2ag-38-Rtd" secondAttribute="height" multiplier="1:1.5" id="2mf-Du-msz"/>
+                                                        <constraint firstAttribute="height" constant="80" id="nCT-Hj-vlJ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3U-EZ-O1J">
+                                                    <rect key="frame" x="93.5" y="36" width="300.5" height="47"/>
+                                                    <string key="text">A burger-loving hit man, his philosophical partner, a drug-addled gangster's moll and a washed-up boxer converge in this sprawling, comedic crime caper. Their adventures unfurl in three stories that ingeniously trip back and forth in time.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="0.39662000870000003" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="j3U-EZ-O1J" secondAttribute="trailing" constant="20" id="IKK-Wt-qfk"/>
+                                                <constraint firstItem="YH6-Js-3d5" firstAttribute="top" secondItem="2ag-38-Rtd" secondAttribute="top" constant="4" id="Jag-pE-lUX"/>
+                                                <constraint firstItem="YH6-Js-3d5" firstAttribute="leading" secondItem="2ag-38-Rtd" secondAttribute="trailing" constant="20" id="TPg-sK-0lG"/>
+                                                <constraint firstItem="j3U-EZ-O1J" firstAttribute="top" secondItem="YH6-Js-3d5" secondAttribute="bottom" constant="4" id="ZfQ-aa-a2H"/>
+                                                <constraint firstItem="j3U-EZ-O1J" firstAttribute="leading" secondItem="2ag-38-Rtd" secondAttribute="trailing" constant="20" id="d7U-gn-28W"/>
+                                                <constraint firstItem="2ag-38-Rtd" firstAttribute="centerY" secondItem="zap-Ch-S90" secondAttribute="centerY" id="fRl-xv-Hkx"/>
+                                                <constraint firstItem="2ag-38-Rtd" firstAttribute="leading" secondItem="zap-Ch-S90" secondAttribute="leading" constant="20" id="geg-tx-nOw"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YH6-Js-3d5" secondAttribute="trailing" constant="20" symbolic="YES" id="kKL-QS-QP3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="j3U-EZ-O1J" id="2TL-6V-xyH"/>
+                                            <outlet property="titleLabel" destination="YH6-Js-3d5" id="ZM5-AE-R0t"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="qTA-NM-0Yh" id="kJL-X1-Dmy"/>
+                            <outlet property="delegate" destination="qTA-NM-0Yh" id="Imb-Sg-YZZ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Movies" id="po8-sR-mBp">
+                        <barButtonItem key="leftBarButtonItem" title="Settings" id="gDb-rX-Tai">
+                            <connections>
+                                <segue destination="hjj-9N-u7r" kind="show" id="W1i-xA-3dC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zmV-Fp-Vyj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="940.57971014492762" y="145.98214285714286"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="zOc-Jg-6ex">
+            <objects>
+                <tableViewController id="hjj-9N-u7r" customClass="SettingsViewController" customModule="DarkModeDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="anE-Cg-v0b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="EiH-Su-Emh">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="Hiv-zt-zQj" style="IBUITableViewCellStyleDefault" id="iFr-sm-SEH">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iFr-sm-SEH" id="1cC-Q0-sgb">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Dark theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hiv-zt-zQj">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="hjj-9N-u7r" id="RoZ-97-77i"/>
+                            <outlet property="delegate" destination="hjj-9N-u7r" id="gaj-7K-rvx"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Qml-6n-7c7"/>
+                    <connections>
+                        <outlet property="cell" destination="iFr-sm-SEH" id="mRe-35-7oR"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qa8-ji-m3V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1812" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Life_Is_Beautiful" width="600" height="900"/>
+        <image name="Parasite" width="600" height="900"/>
+        <image name="Pulp_Fiction" width="600" height="900"/>
+        <image name="Schindlers_List " width="600" height="900"/>
+        <image name="The_Godfather " width="1500" height="2250"/>
+        <image name="The_Green_Mile" width="600" height="900"/>
+        <image name="The_Shawshank_Redemption" width="600" height="900"/>
+    </resources>
 </document>
